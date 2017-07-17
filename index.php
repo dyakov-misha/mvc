@@ -4,7 +4,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/Autoload.php';
 $config = require($_SERVER['DOCUMENT_ROOT'].'/config.php');
 
 use controllers\PostController;
+use base\App;
 
-$controller = new PostController($config);
-$controller -> request();
+(new base\App())->run($config);
 ?>
